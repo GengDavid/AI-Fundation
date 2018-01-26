@@ -16,8 +16,13 @@ I have tried three distance in ![](http://latex.codecogs.com/gif.latex?$L_p$) sp
 First we compare these ![](http://latex.codecogs.com/gif.latex?$L_p$) distances. According to the definition of ![](http://latex.codecogs.com/gif.latex?$L_p$) distance, we can find that when we have different dimension, we can get different result if we use different value of “p” because the dimensions they take into account are different. The larger p it is, the less dimension it will consider and the small the value is. There is a very simple example to explain it. Let us have two point ![](http://latex.codecogs.com/gif.latex?p_1(4,0)) and ![](http://latex.codecogs.com/gif.latex?p_2(4,3)), and we have another point p_3 locate at ![](http://latex.codecogs.com/gif.latex?(0,0)). By intuitive we will say that ![](http://latex.codecogs.com/gif.latex?p_2) is farther to ![](http://latex.codecogs.com/gif.latex?p_3) than ![](http://latex.codecogs.com/gif.latex?p_1) (since the Euclidean distance between ![](http://latex.codecogs.com/gif.latex?p_2) and ![](http://latex.codecogs.com/gif.latex?p_3) is 4.24). But when we choose p larger than 2, we will find that in such scenario, ![](http://latex.codecogs.com/gif.latex?p_2) is closer to ![](http://latex.codecogs.com/gif.latex?p_3) than ![](http://latex.codecogs.com/gif.latex?p_1) (sometimes this is not we want). Then we can generalize it to a common condition,   
 ![](http://latex.codecogs.com/gif.latex?‖x‖_{p+α}≤‖x‖_p,) for any p≥1 and α≥0.
 So if we have many dimension have to be taken, choose a small p to handle more dimension (but we usually do not choose p less than 0 since it will increase the complexity).
+<<<<<<< HEAD
 And another way to measure the similarity between two samples is cosine similarity. An explicit comparison is shown bellow   
 ![comparison of L2 distance and cosine similarity](./img/L2_cos_comp.png)  
+=======
+And another way to measure the similarity between two samples is cosine similarity. An explicit comparison is shown bellow  
+![comparison of L2 distance and cosine similarity](./img/L2_cos_comp.png) 
+>>>>>>> b1e8909d9198c366f6d7315e6bf4353716270416
 As the figure shows, cosine similarity measures the difference between two vector by measuring the angle between them (i.e. inner product space).  
 ![](http://latex.codecogs.com/gif.latex?cos\\_similarity=\\frac{\\mathbf{x_1}\\mathbf{x_2}}{‖\\mathbf{x_1}‖_2‖\mathbf{x_2}‖_2})  
 As we all know that the cosine of 0° is 1 and it’s less than 1 for other angle. And since we only use it in positive space (normalized tf-idf value, with the interval [0, 1]), I transform the cosine similarity via cosine distance via  
