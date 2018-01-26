@@ -1,5 +1,8 @@
 # Naive Bayes
 
 ## Algorithm principle
-![](./img/0_1.png)  
-![](./img/0_2.png)
+![](./img/01.png)  
+![](./img/02.png)  
+![](./img/03.png)  
+![](./img/04.png)  
+![](./img/05.png)  
