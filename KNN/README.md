@@ -17,8 +17,7 @@ First we compare these ![](http://latex.codecogs.com/gif.latex?$L_p$) distances.
 So if we have many dimension have to be taken, choose a small p to handle more dimension (but we usually do not choose p less than 0 since it will increase the complexity).
 And another way to measure the similarity between two samples is cosine similarity. An explicit comparison is shown bellow  
 ![comparison of L2 distance and cosine similarity](./img/L2_cos_comp.png)  
-As the figure shows, cosine similarity measures the difference between two vector by measuring the angle between them (i.e. inner product space).  
-![](http://latex.codecogs.com/gif.latex?cos\\_similarity=\\frac{\\mathbf{x_1}\\mathbf{x_2}}{‖\\mathbf{x_1}‖_2‖\mathbf{x_2}‖_2})  
+As the figure shows, cosine similarity measures the difference between two vector by measuring the angle between them (i.e. inner product space ![](http://latex.codecogs.com/gif.latex?cos\\_similarity=\\frac{\\mathbf{x_1}\\mathbf{x_2}}{‖\\mathbf{x_1}‖_2‖\mathbf{x_2}‖_2})).  
 As we all know that the cosine of 0° is 1 and it’s less than 1 for other angle. And since we only use it in positive space (normalized tf-idf value, with the interval [0, 1]), I transform the cosine similarity via cosine distance via ![](http://latex.codecogs.com/gif.latex?cos\\_distance=1-cos\\_similarity) for calculation convenience.  
 The cosine similarity is widely used in text classification owing to its efficiency and it high performance when facing to sparse vectors since it will only consider the non-zero dimensions.   
 And another important reason we use it in text classification is that, what we care about sometimes is not the direct distance between two vectors but the similarity between them. To be more clear, we can imagine that we have training data on the unit circle and a test sample locate at the origin, the Euclidean distances are same but we know the vector them form are totally different, and some of them even opposite to each other.
@@ -29,3 +28,8 @@ But a drawback of the basic "majority voting" classification is that when the fe
 
 ### Regression
 In regression problems, we are facing continuous variables. We can calculate the average value of the k nearest neighbors easily. And since we are deal with the probability of 6 emotions the document might be, we then need to normalize the result to make the sum of 6 probabilities to be 1 (dividing by the sum of 6 regression result).
+
+## Experiment
+I've tried different k from 1 to 25 on my dataset, and here's the result  
+![result](./img/acc.png)  
+As we can see from this figure, we get maximum precision at k=13, and the precision goes up from 1 to 13 and fall down after that, but all classification precisions of our model on the validation set are above 40%. The accuracy seems not high because the validation set contains many different words that didn't appear in the training set. If we try to use KNN on other datasets it sometime can get an amazing result.
