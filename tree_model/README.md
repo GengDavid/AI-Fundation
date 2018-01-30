@@ -1,4 +1,4 @@
-# Naive Bayes
+# Tree Model
 
 ## Algorithm principle
 ![](../res/dt01.png)  
