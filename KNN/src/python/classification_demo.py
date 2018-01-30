@@ -1,9 +1,9 @@
+from __future__ import absolute_import
+
 import numpy as np
 import operator
 import pandas as pd
-import .
-import ..
-from ..preprocessing import text_processing
+from ..preprocessing.text_processing import *
 
 
 def classify(train_data, valid_data):

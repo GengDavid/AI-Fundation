@@ -1,8 +1,8 @@
+from __future__ import absolute_import
+
 import numpy as np
 import operator
 import pandas as pd
-import .
-import ..
 from ..preprocessing.text_processing import *
 from KNN import knn_clssify
 from KNN import knn_regression
