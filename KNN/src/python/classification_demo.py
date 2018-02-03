@@ -3,7 +3,7 @@ from __future__ import absolute_import
 import numpy as np
 import operator
 import pandas as pd
-from ..preprocessing.text_processing import *
+from ai_fundation.preprocessing.text_processing import *
 
 
 def classify(train_data, valid_data):
@@ -59,13 +59,13 @@ def classify(train_data, valid_data):
 
 
 def main():
-	train_file = 'train_set.csv'
+    train_file = 'train_set.csv'
     train_data = pd.read_csv(train_file)
 
     valid_file = 'validation_set.csv'
     valid_data = pd.read_csv(valid_file)
 
-	classify(train_data, valid_data)    
+    classify(train_data, valid_data)    
 
 if __name__ == '__main__':
     main()
